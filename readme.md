@@ -1,4 +1,4 @@
-## HIBOT07
+### HIBOT07
 
 This is the main and only GitHub repository for my first python discord bot, HiBot!
 
