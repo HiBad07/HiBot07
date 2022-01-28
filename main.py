@@ -70,7 +70,7 @@ async def on_message(message):
 #    stepper = 10.0 ** digits
 #    return math.trunc(stepper * number) / stepper
 
-  
+  #reeee
 
 
 #Quote function
