@@ -10,6 +10,10 @@ import requests
 import json
 import math
 import random
+from discord.ext import commands,tasks
+
+
+
 
 #vars
 client = discord.Client()
@@ -30,7 +34,11 @@ depressing_quotes = [
 #Console logs a ready message when the bot is online
 @client.event
 async def on_ready():
-  print("We have logged in as {0.user}!".format(client))
+    for guild in client.guilds:
+        for channel in guild.text_channels :
+            if str(channel) == "general" :
+                await channel.send('Bot Activated..')
+        print('Active in {}\n Member Count : {}'.format(guild.name,guild.member_count))
 
 #Commands
 @client.event
@@ -65,12 +73,16 @@ async def on_message(message):
     random_index = random.randint(0,len(depressing_quotes)-1)
     await message.channel.send(depressing_quotes[random_index])
 
+  if message.content == '!avatar':
+    clientProfilePicture = message.author.avatar_url
+    await message.channel.send(clientProfilePicture) 
+
 
 #def truncate(number, digits) -> float:
 #    stepper = 10.0 ** digits
 #    return math.trunc(stepper * number) / stepper
 
-  #reeee
+
 
 
 #Quote function

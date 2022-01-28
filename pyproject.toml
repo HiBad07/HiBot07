@@ -1,12 +1,13 @@
 [tool.poetry]
-name = "repl_python3_HiBot"
-version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+name = "HiBot07"
+version = "0.1.1"
+description = "Simple discord bot"
+authors = ["James Draper - HiBad07"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 discord = "^1.7.3"
+youtube_dl = "^2021.12.17"
 
 [tool.poetry.dev-dependencies]
 
